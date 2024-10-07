@@ -96,7 +96,7 @@ button:hover {
     top: 100%; /* Mover a seta para baixo do balão */
     left: 70%; /* Centraliza a seta */
     margin-left: -10px; /* Ajusta a centralização */
-    border-width: 40px; /* Tamanho da seta */
+    border-width: 20px; /* Tamanho da seta */
     border-style: solid;
     border-color: #f7fcff transparent transparent transparent; /* Cor da seta (virada para baixo) */
 }
