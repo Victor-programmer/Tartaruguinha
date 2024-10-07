@@ -75,13 +75,14 @@ button:hover {
     top: -10px; /* Mantém a posição do balão */
     left: 50%; /* Centraliza horizontalmente */
     transform: translateX(-50%); /* Centraliza o balão */
-    width: 100%;
+    width: 80%;
     margin-top: 70px;
     max-width: 500px; /* Limite do tamanho do balão */
     height: auto; /* Ajusta a altura automaticamente com base no conteúdo */
 }
 
 #balao {
+    
     background-color: #f7fcff; /* Cor do balão */
     padding: 30px; /* Espaçamento interno do balão */
     border-radius: 35px; /* Bordas arredondadas */
