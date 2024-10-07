@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tartaruga Falante</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tartaruga-container">
+            <div class="legenda-container">
+                <div id="balao">
+                    <p id="legenda">eu posso falar?</p>
+                </div>
+            </div>
+            <img src="img/tartaruga.png" alt="Tartaruga Falante" class="tartaruga-img">
+        </div>
+
+        <div class="audio-container">
+            <audio controls id="audioPlayer">
+                <source src="audio/olá meu nome é Hugo .m4a" type="audio/mpeg">
+                <track src="legendas.vtt" kind="subtitles" srclang="pt-br" label="Português" default>
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+        </div>
+
+        <div class="button-container">
+            <button id="botao-sim">Sim</button>
+            <button id="botao-espera">pausa rapidinho</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

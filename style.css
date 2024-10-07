@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-image: url('img/fundo.jpg'); /* Imagem de fundo */
+    background-repeat: no-repeat; /* Não repetir a imagem */
+    background-size: cover; /* Cobrir toda a área do elemento */
+    background-position: center; /* Centralizar a imagem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    max-width: 100%; /* Limite de largura */
+    width: 100%;
+}
+
+.tartaruga-container {
+    position: relative;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    align-items: center;
+}
+
+.tartaruga-img {
+    width: 100%; /* Ocupa a largura total disponível */
+    max-width: 500px; /* Tamanho máximo da tartaruga */
+    height: auto; /* Ajusta a altura automaticamente */
+    transform: rotate(7deg);
+    margin-top: 200px; /* Adiciona um espaçamento superior */
+}
+
+#audioPlayer {
+    display: none; /* Esconder o player de áudio padrão */
+}
+
+/* Estilo dos botões */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Espaço entre os botões */
+    margin-top: 20px;
+    margin: 20px;
+}
+
+button {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px 30px; /* Ajustar o padding dos botões */
+    font-size: 2rem; /* Ajustar tamanho da fonte */
+    border: none;
+    border-radius: 30px;
+    background-color: #f7fcff;
+    color: rgb(1, 1, 1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e5e5e6b8;
+}
+
+/* Balão de fala */
+.legenda-container {
+    position: absolute;
+    top: -10px; /* Mantém a posição do balão */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Centraliza o balão */
+    width: 100%;
+    margin-top: 70px;
+    max-width: 500px; /* Limite do tamanho do balão */
+    height: auto; /* Ajusta a altura automaticamente com base no conteúdo */
+}
+
+#balao {
+    background-color: #f7fcff; /* Cor do balão */
+    padding: 30px; /* Espaçamento interno do balão */
+    border-radius: 35px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra do balão */
+    position: relative; /* Para posicionar a seta do balão */
+    display: inline-block; /* Para ajustar o tamanho ao conteúdo */
+}
+
+#balao:after {
+    content: '';
+    position: absolute;
+    top: 100%; /* Mover a seta para baixo do balão */
+    left: 70%; /* Centraliza a seta */
+    margin-left: -10px; /* Ajusta a centralização */
+    border-width: 40px; /* Tamanho da seta */
+    border-style: solid;
+    border-color: #f7fcff transparent transparent transparent; /* Cor da seta (virada para baixo) */
+}
+
+#legenda {
+    font-weight: 600;
+    font-size: 2.5em; /* Tamanho da fonte */
+    color: #333;
+    text-align: center;
+}
+
+/* Responsividade para dispositivos maiores */
+@media (max-width: 768px) {
+    .tartaruga-img {
+        max-width: 80%; /* Ajusta o tamanho da tartaruga em telas menores */
+    }
+
+    button {
+        font-size: 3rem; /* Tamanho da fonte dos botões em telas menores */
+        padding: 15px 30px; /* Ajusta o padding dos botões */
+    }
+
+    #legenda {
+        font-size: 1.8em; /* Ajusta o tamanho da fonte da legenda */
+    }
+}
+
+/* Responsividade para dispositivos ainda menores */
+@media (max-width: 480px) {
+    .tartaruga-img {
+        max-width: 100%; /* Aumenta o tamanho da tartaruga em telas pequenas */
+    }
+
+    button {
+        font-size: 2rem; /* Ajusta o tamanho da fonte dos botões */
+        padding: 10px 20px; /* Ajusta o padding dos botões */
+    }
+
+    #legenda {
+        font-size: 1.5em; /* Ajusta o tamanho da fonte da legenda */
+    }
+}
